@@ -76,8 +76,14 @@ public class Permission extends CordovaPlugin {
         }
     }
 
+    /*
+     * This is deprecated in favour of onRequestPermissionsResult, but as of
+     * this writing, Cordova never calls onRequestPermissionsResult. So we have
+     * to use the deprecated method until they fix this.
+     */
+    @SuppressWarnings("deprecation")
     @Override
-    public void onRequestPermissionsResult(
+    public void onRequestPermissionResult(
         int requestCode, String[] permissions, int[] grantResults
     ) throws JSONException {
         Log.i(TAG, "Permission request callback called. requestCode: " + requestCode);
