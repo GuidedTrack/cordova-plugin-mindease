@@ -8,6 +8,7 @@ import java.lang.reflect.Field;
 import java.lang.IllegalAccessException;
 import java.lang.NoSuchFieldException;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -16,8 +17,6 @@ import org.apache.cordova.CallbackContext;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-
-// TODO: Run a Java formatter over this if it exists.
 
 public class Permission extends CordovaPlugin {
     private static final String TAG = "mindease.Permission";
@@ -87,7 +86,7 @@ public class Permission extends CordovaPlugin {
 
         CallbackContext callbackContext = resultCallbacks.remove(requestCode);
 
-        if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+        if (Objects.equals(grantResults[0], PackageManager.PERMISSION_GRANTED)) {
             Log.i(TAG, "Granted permission " + permissions[0] + ".");
             callbackContext.success();
             return;
