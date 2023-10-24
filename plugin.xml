@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-mindease" version="0.1.0">
+    <name>Mind Ease Native</name>
+    <description>All native code for Mind Ease.</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,mindease</keywords>
+
+    <js-module src="www/mindease.js" name="mindease">
+        <clobbers target="cordova.plugins.mindease" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Permission">
+                <param name="android-package" value="io.mindease.cordova.Permission"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Permission.java" target-dir="src/io/mindease/cordova" />
+    </platform>
+</plugin>

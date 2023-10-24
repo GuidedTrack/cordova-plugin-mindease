@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-mindease",
+  "version": "0.1.0",
+  "description": "All native code for Mind Ease.",
+  "cordova": {
+    "id": "cordova-plugin-mindease",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "mindease",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "GuidedTrack team",
+  "license": "Apache 2.0"
+}

@@ -1,0 +1,1 @@
+{:paths ["scripts"], :tasks {reinstall-js reinstall-js/-main}}
