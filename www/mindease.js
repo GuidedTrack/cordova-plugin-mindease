@@ -1,4 +1,4 @@
-const exec = require('cordova/exec');
+const exec = require("cordova/exec");
 
 exports.ensurePermission = function (name) {
   return new Promise((resolve, reject) => {
