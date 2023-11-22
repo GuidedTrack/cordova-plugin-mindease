@@ -1,1 +1,5 @@
-{:paths ["scripts"], :tasks {reinstall-js reinstall-js/-main}}
+{:paths ["scripts"],
+ :tasks {:init (def config {:exec-args {:java-deps-dir "java-deps"}}),
+         classpath (exec 'classpath/main config),
+         install-deps (exec 'install-deps/main config),
+         reinstall-js (exec 'reinstall-js/main)}}

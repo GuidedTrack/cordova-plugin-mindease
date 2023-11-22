@@ -17,7 +17,7 @@
   "author": "GuidedTrack team",
   "license": "Apache 2.0",
   "scripts": {
-    "prettify": "npx prettier --plugin=prettier-plugin-java --write **/*.java"
+    "prettify": "npx prettier --plugin=prettier-plugin-java --write src/**/*.java www/**/*.js"
   },
   "devDependencies": {
     "prettier-plugin-java": "^2.3.1"
